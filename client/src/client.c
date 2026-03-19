@@ -117,10 +117,9 @@ void paquete(int conexion)
 	// Ahora toca lo divertido!
 	char* leido;
 	t_paquete* paquete;
-	t_log* logger;
 	// Leemos y esta vez agregamos las lineas al paquete
 	paquete=crear_paquete();
-	char* leido = readline("> ");
+	leido = readline("> ");
 
     // El resto, las vamos leyendo y logueando hasta recibir un string vacío
     // strcmp devuelve 0 si ambos strings son exactamente iguales
@@ -140,8 +139,8 @@ void paquete(int conexion)
 	
 	free(leido);
 	// ¡No te olvides de liberar las líneas y el paquete antes de regresar!
-	enviar_paquete(paquete, conexion)
-	eliminar_paquete(paquete)
+	enviar_paquete(paquete, conexion);
+	eliminar_paquete(paquete);
 	
 }
 
